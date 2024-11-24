@@ -24,7 +24,6 @@
           hx-swap="innerHTML"
         >
           {% csrf_token %} {{ form.as_p }}
-          <!-- Renderiza el formulario -->
           <button type="submit" class="btn btn-primary w-100">
             Crear Cuenta
           </button>
@@ -33,5 +32,4 @@
     </div>
   </div>
 </div>
-
 {% endblock %}
