@@ -1,15 +1,15 @@
 {% block content %}
 <div
   class="modal fade"
-  id="loginModal"
+  id="signupModal"
   tabindex="-1"
-  aria-labelledby="loginModalLabel"
+  aria-labelledby="signupModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+        <h5 class="modal-title" id="signupModalLabel">Crear Cuenta</h5>
         <button
           type="button"
           class="btn-close"
@@ -19,14 +19,14 @@
       </div>
       <div class="modal-body">
         <form
-          hx-post="{% url 'loginModal' %}"
-          hx-target="#modalContainer"
+          hx-post="{% url 'signupModal' %}"
+          hx-target="#signupContainer"
           hx-swap="innerHTML"
         >
           {% csrf_token %} {{ form.as_p }}
           <!-- Renderiza el formulario -->
           <button type="submit" class="btn btn-primary w-100">
-            Iniciar Sesión
+            Crear Cuenta
           </button>
         </form>
       </div>

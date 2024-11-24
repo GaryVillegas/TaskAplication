@@ -41,7 +41,7 @@
           href="/"
         >
           <ion-icon
-            name="code-slash-outline"
+            name="copy-outline"
             width="40"
             height="40"
             style="font-size: 30px"
@@ -59,11 +59,22 @@
         >
           Entrar Cuenta
         </button>
-        <button class="btn btn-primary">Crear Cuenta</button>
+        <button
+          class="btn btn-primary"
+          hx-get="{% url 'signupModal' %}"
+          hx-target="#signupContainer"
+          hx-trigger="click"
+          data-bs-target="modal"
+          data-bs-toggle="#signupModal"
+        >
+          Crear Cuenta
+        </button>
       </div>
     </header>
     <div id="modalContainer"></div>
+    <div id="signupContainer"></div>
 
     <script src="{% static 'main.js' %}"></script>
+    <div class="container-fluid"></div>
   </body>
 </html>

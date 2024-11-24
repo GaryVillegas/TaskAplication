@@ -26,3 +26,17 @@ def loginModal(request):
                 return JsonResponse({'success': False, 'error': 'Credenciales inválidas'})  # Error
         return JsonResponse({'success': False, 'error': 'Formulario inválido'})  # Validación fallida
     return render(request, 'partials/loginModal.html', {'form': form})
+
+def signupModal(request):
+    form = SignupForm()
+    if request.method == "GET":
+        form = SignupForm()
+        return render(request, 'partials/signupModal.html', {'form': form})
+    elif request.method == "POST":
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'success': True})
+        return JsonResponse({'success': False, 'errors': form.errors})
+
+    return render(request, 'partials/signupModal.html', {'form': form})
