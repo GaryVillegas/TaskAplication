@@ -28,6 +28,8 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Local Link -->
+    <script src="{% static 'main.js' %}"></script>
   </head>
   <body>
     <header
@@ -47,9 +49,21 @@
         </a>
       </div>
       <div class="col-md-auto mb-2 mb-md-0">
-        <button class="btn btn-outline-primary me-2">Entrar Cuenta</button>
+        <button
+          class="btn btn-outline-primary me-2"
+          hx-get="{% url 'loginModal' %}"
+          hx-target="#modalContainer"
+          hx-trigger="click"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
+        >
+          Entrar Cuenta
+        </button>
         <button class="btn btn-primary">Crear Cuenta</button>
       </div>
     </header>
+    <div id="modalContainer"></div>
+
+    <script src="{% static 'main.js' %}"></script>
   </body>
 </html>

@@ -1,16 +1,17 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
-from forms import *
+from .forms import *
 
 # Create your views here.
 def index(request):
     return render(request, 'core/index.html')
 
 def loginModal(request):
+    form = LoginForm()
     if request.method == "GET":
         form = LoginForm()
-        return render(request, 'partials/login_modal.html', {'form': form})
+        return render(request, 'partials/loginModal.html', {'form': form})
 
     elif request.method == "POST":
         form = LoginForm(request.POST)
@@ -24,3 +25,4 @@ def loginModal(request):
             else:
                 return JsonResponse({'success': False, 'error': 'Credenciales inválidas'})  # Error
         return JsonResponse({'success': False, 'error': 'Formulario inválido'})  # Validación fallida
+    return render(request, 'partials/loginModal.html', {'form': form})
