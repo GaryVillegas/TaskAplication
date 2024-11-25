@@ -5,7 +5,11 @@ from .forms import *
 
 # Create your views here.
 def index(request):
-    return render(request, 'core/index.html')
+    usuario = User.objects.all()
+    context = {
+        'usuario': usuario
+    }
+    return render(request, 'core/index.html', context)
 
 def loginModal(request):
     form = LoginForm()

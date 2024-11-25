@@ -22,6 +22,7 @@
           hx-post="{% url 'loginModal' %}"
           hx-target="#modalContainer"
           hx-swap="innerHTML"
+          method="POST"
         >
           {% csrf_token %} {{ form.as_p }}
           <!-- Renderiza el formulario -->
