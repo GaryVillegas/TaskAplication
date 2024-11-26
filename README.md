@@ -16,3 +16,9 @@ HTMX y Boostrap como frontEnd, Djando para backEnd y postgres como base de datos
 <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTMXlogo" with="60px"/>
 <img src="https://img.icons8.com/?size=100&id=baihjTL3IBX9&format=png&color=000000" alt="HTMXlogo" with="60px"/>
 <img src="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" alt="HTMXlogo" with="60px"/>
+
+#### Imagenes de ejemplo acontinuación
+
+<img src="ExampleIMG\example1-whiteboard.png" alt="example1">
+<img src="ExampleIMG\example2-modalform.png" alt="example2">
+<img src="ExampleIMG\example3-taskcard.png" alt="example3">
