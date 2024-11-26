@@ -10,7 +10,7 @@ Como se menciono anteriormente, para este pequeño desarrollo se utilizo:
 - Bootstrap
 
 HTMX y Boostrap como frontEnd, Djando para backEnd y postgres como base de datos. Utilizando el modelo arquitectonico MVC de Django.
-<img href="https://img.icons8.com/?size=100&id=4i8EFdsgyQ2M&format=png&color=FFFFFF" alt="HTMXlogo" with="60px"/>
-<img href="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTMXlogo" with="60px"/>
-<img href="https://img.icons8.com/?size=100&id=baihjTL3IBX9&format=png&color=000000" alt="HTMXlogo" with="60px"/>
-<img href="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" alt="HTMXlogo" with="60px"/>
+<img src="https://img.icons8.com/?size=100&id=4i8EFdsgyQ2M&format=png&color=FFFFFF" alt="HTMXlogo" with="60px"/>
+<img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTMXlogo" with="60px"/>
+<img src="https://img.icons8.com/?size=100&id=baihjTL3IBX9&format=png&color=000000" alt="HTMXlogo" with="60px"/>
+<img src="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" alt="HTMXlogo" with="60px"/>
