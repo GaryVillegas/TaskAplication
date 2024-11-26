@@ -10,15 +10,25 @@ Como se menciono anteriormente, para este pequeño desarrollo se utilizo:
 - Bootstrap
 
 HTMX y Boostrap como frontEnd, Djando para backEnd y postgres como base de datos. Utilizando el modelo arquitectonico MVC de Django.
-
+Logos en los links[^1].
 
 <img src="https://img.icons8.com/?size=100&id=4i8EFdsgyQ2M&format=png&color=FFFFFF" alt="HTMXlogo" with="60px"/>
 <img src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="HTMXlogo" with="60px"/>
 <img src="https://img.icons8.com/?size=100&id=baihjTL3IBX9&format=png&color=000000" alt="HTMXlogo" with="60px"/>
 <img src="https://img.icons8.com/?size=100&id=38561&format=png&color=000000" alt="HTMXlogo" with="60px"/>
 
-#### Imagenes de ejemplo acontinuación
+### Imagenes de ejemplo acontinuación
 
 <img src="ExampleIMG\example1-whiteboard.png" alt="example1">
 <img src="ExampleIMG\example2-modalform.png" alt="example2">
 <img src="ExampleIMG\example3-taskcard.png" alt="example3">
+
+##### Nota
+
+Esta más que claro que falta por mejorar el proyecto, pero no se puede hacer mucho solo un fin de semana.
+Pauta seguida para poder crear este archivo[^2].
+
+Saludos!
+
+[^1]:https://iconos8.es/icons
+[^2]:https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
