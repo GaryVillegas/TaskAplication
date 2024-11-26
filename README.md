@@ -18,14 +18,14 @@ HTMX y Boostrap como frontEnd, Djando para backEnd y postgres como base de datos
 Logos en los links[^1].
 
 ### Imagenes de ejemplo acontinuación
-
+------
 
 <img src="ExampleIMG\example1-whiteboard.png" alt="example1">
 <img src="ExampleIMG\example2-modalform.png" alt="example2">
 <img src="ExampleIMG\example3-taskcard.png" alt="example3">
 
 ##### Nota
-
+------
 
 Esta más que claro que falta por mejorar el proyecto, pero no se puede hacer mucho solo un fin de semana.
 Pauta seguida para poder crear este archivo[^2].
