@@ -44,38 +44,76 @@
             name="copy-outline"
             width="40"
             height="40"
-            style="font-size: 30px"
+            style="font-size: 30px; margin-top: 9px"
           ></ion-icon>
+          <p style="font-size: 30px">Task</p>
         </a>
       </div>
-      <div class="col-md-auto mb-2 mb-md-0">
-        <button
-          class="btn btn-outline-primary me-2"
-          hx-get="{% url 'loginModal' %}"
-          hx-target="#modalContainer"
-          hx-trigger="click"
-          data-bs-toggle="modal"
-          data-bs-target="#loginModal"
-        >
-          Entrar Cuenta
-        </button>
-        <button
-          class="btn btn-primary"
-          hx-get="{% url 'signupModal' %}"
-          hx-target="#signupContainer"
-          hx-trigger="click"
-          data-bs-toggle="modal"
-          data-bs-target="#signupModal"
-        >
-          Crear Cuenta
-        </button>
-      </div>
     </header>
-    <div id="modalContainer"></div>
-    <div id="signupContainer"></div>
 
-    <div class="container-fluid"></div>
+    <div class="container-fluid">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-dark mt-2"
+        data-bs-toggle="modal"
+        data-bs-target="#createTask"
+      >
+        <ion-icon name="add-circle-outline"></ion-icon>
+        Create Task
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="createTask"
+        tabindex="-1"
+        aria-labelledby="createTaskLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="createTaskLabel">Modal title</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                method="POST"
+                action="/"
+                hx-post="/"
+                hx-target="body"
+                hx-swap="outerHTML"
+              >
+                {% csrf_token %} {{ taskform.as_p }}
+                <button type="submit" class="btn btn-dark mt-2">Guardar</button>
+                <button
+                  type="button"
+                  class="btn btn-white mt-2"
+                  data-bs-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="scrollable-container"
+        class="border border-0"
+        hx-get="/tasks"
+        hx-trigger="load"
+        hx-target="#scrollable-container"
+        hx-swap="innerHTML"
+      ></div>
+    </div>
     <script src="{% static 'main.js' %}"></script>
-    <p>{{ usuario.username }}</p>
   </body>
 </html>

@@ -1,18 +1,28 @@
 from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from .models import *
+from bootstrap_datepicker.widgets import DatePicker
 
-class LoginForm(AuthenticationForm):
-    username = forms.CharField(widget=forms.TextInput(attrs={
-        'class': 'form-control', 'placeholder': 'Usuario', 'label': 'Nombre de usuario'}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={
-        'class': 'form-control', 'placeholder': 'Contraseña', 'label': 'Contraseña'}))
+#$class LoginForm(AuthenticationForm):
+#$    username = forms.CharField(widget=forms.TextInput(attrs={#$
+#$        'class': 'form-control', 'placeholder': 'Usuario', 'label': 'Nombre de usuario'}))
+#$    password = forms.CharField(widget=forms.PasswordInput(attrs={
+#$        'class': 'form-control', 'placeholder': 'Contraseña', 'label': 'Contraseña'}))
 
-class SignupForm(UserCreationForm):
+#class SignupForm(UserCreationForm):
+#    class Meta:
+#        model= User
+#        fields = ["username", "email",]
+#        widgets = {
+#            'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Usuario', 'label': 'Nombre de Usuario'}),
+#            'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email', 'label': 'Ingrese Email'}),
+#        }
+
+class TaskForm(forms.ModelForm):
     class Meta:
-        model= User
-        fields = ["username", "email",]
+        model = Task
+        fields = ["title", "time_task", "description"]
         widgets = {
-            'username': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Usuario', 'label': 'Nombre de Usuario'}),
-            'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email', 'label': 'Ingrese Email'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'label': 'Tittle'}),
+            'time_task': forms.DateInput(attrs={'class': 'form-control', 'type': 'date','label': 'Time task'}),
+            'description': forms.Textarea(attrs={'class': 'form-control', 'label': 'description'})
         }
